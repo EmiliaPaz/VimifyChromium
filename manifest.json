@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "version": "1.0",
+  "name": "Chromium GoTo Line",
+  "description": "Goes to a specific line on Chromium source code pages after a given number.",
+  "permissions": ["activeTab", "scripting"],
+  "commands": {
+    "go-to-line": {
+      "suggested_key": {
+        "default": "Ctrl+Comma"
+      },
+      "description": "Goes to a specific line on Chromium source code pages."
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
