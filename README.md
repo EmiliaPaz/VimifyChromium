@@ -1,7 +1,7 @@
 # Chromium GoTo Line
 
 Chrome Extension that allows the user to go to a line in
-https://source.chromium.org/ by typing Control+Comma+<number>+Enter
+https://source.chromium.org/ by typing Control+Comma+Number+Enter
 
 ### How to build
 
