@@ -1,18 +1,14 @@
 {
   "manifest_version": 3,
-  "version": "1.0",
-  "name": "Chromium GoTo Line",
-  "description": "Goes to a specific line on Chromium source code pages after a given number.",
-  "permissions": ["activeTab", "scripting"],
-  "commands": {
-    "go-to-line": {
-      "suggested_key": {
-        "default": "Ctrl+Comma"
-      },
-      "description": "Goes to a specific line on Chromium source code pages."
+  "version": "2.0",
+  "name": "Vimify Chromium",
+  "description": "Vim command for Chromium's codesearch.",
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://source.chromium.org/*"],
+      "js": ["commands.js", "keyEvents.js"],
+      "run_at": "document_idle"
     }
-  },
-  "background": {
-    "service_worker": "background.js"
-  }
+  ]
 }
